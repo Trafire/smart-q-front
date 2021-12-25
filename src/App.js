@@ -73,7 +73,7 @@ function App() {
       <CardActions style={{justifyContent: 'center'}}>
 
         <Button variant="contained" onClick={nextQuestion} size="large"><h1>Nope</h1></Button>
-        <Button variant="contained" onClick={confirm} size="large"><h1>Post</h1></Button>
+        <Button variant="contained" onClick={confirm} size="large"><h1>Post It</h1></Button>
 
       </CardActions>
     </Card>
