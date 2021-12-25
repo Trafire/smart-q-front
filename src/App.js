@@ -18,11 +18,11 @@ function App() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({pose_question: false, internal_rating: text.internal_rating - 200})
     };
-    let url = "https://35.223.44.38/sentence/" + pk + "/"
+    let url = "http://35.223.44.38/sentence/" + pk + "/"
     fetch(url, requestOptions)
       .then(response => response.json());
 
-    const response = await fetch("https://35.223.44.38/sentence/random-sentence/");
+    const response = await fetch("http://35.223.44.38/sentence/random-sentence/");
     const data = await response.json();
     console.log(data)
     // store the data into our books variable
@@ -36,11 +36,11 @@ function App() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({pose_question: true})
     };
-    let url = "https://35.223.44.38/sentence/" + pk + "/set-pose/"
+    let url = "http://35.223.44.38/sentence/" + pk + "/set-pose/"
     fetch(url, requestOptions)
       .then(response => response.json());
 
-    const response = await fetch("https://35.223.44.38/sentence/random-sentence/");
+    const response = await fetch("http://35.223.44.38/sentence/random-sentence/");
     const data = await response.json();
     console.log(data)
     // store the data into our books variable
@@ -53,7 +53,7 @@ function App() {
 
     // we will use async/await to fetch this data
     async function getData() {
-      const response = await fetch("https://35.223.44.38/sentence/random-sentence/");
+      const response = await fetch("http://35.223.44.38/sentence/random-sentence/");
       const data = await response.json();
       console.log(data)
       // store the data into our books variable
